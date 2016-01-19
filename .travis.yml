@@ -49,8 +49,6 @@ script:
   - make package
   - make gppkg
   - make doc
-  - cd doc/user/latex
-  - make pdf
 
 ## ----------------------------------------------------------------------
 ## Notify
