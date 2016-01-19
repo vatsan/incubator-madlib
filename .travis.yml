@@ -30,8 +30,8 @@ install:
   - mkdir -p ${TRAVIS_BUILD_DIR}/tools
   - cd ${TRAVIS_BUILD_DIR}/tools
   - sudo add-apt-repository ppa:texlive-backports/ppa
-  - sudo apt-get update
-  - sudo apt-get install texlive
+  - sudo apt-get -y update
+  - sudo apt-get -y install texlive
   - wget http://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.7.linux.bin.tar.gz
   - tar -zxvf doxygen-1.8.7.linux.bin.tar.gz -C ${TRAVIS_BUILD_DIR}/tools
 
