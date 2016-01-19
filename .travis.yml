@@ -1,6 +1,6 @@
 
 language: c
-sudo: false
+sudo: true
 
 git:
   submodules: false
@@ -22,17 +22,19 @@ services:
   - postgresql
 
 ## ----------------------------------------------------------------------
-## Install supporting Python modules
+## Install dependencies
 ## ----------------------------------------------------------------------
 
 install:
   - pip install --user setuptools
+  - sudo apt-get install texlive-latex
+  - sudo apt-get install doxygen
 
 before_script:
   - export PATH=${TRAVIS_BUILD_DIR}/tools/bin:$PATH
 
 ## ----------------------------------------------------------------------
-## Perform build:
+## Build
 ## ----------------------------------------------------------------------
 
 script:
@@ -41,10 +43,14 @@ script:
   - cd build
   - cmake ..
   - make
-  - make install
+  - make package
+  - make gppkg
+  - make doc
+  - cd doc/user/latex
+  - make pdf
 
 ## ----------------------------------------------------------------------
-## Notification
+## Notify
 ## ----------------------------------------------------------------------
 
 notifications:
