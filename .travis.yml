@@ -27,7 +27,7 @@ services:
 
 install:
   - pip install --user setuptools
-  - sudo apt-get install texlive-latex
+  - sudo apt-get install texlive-full
   - sudo apt-get install doxygen
 
 before_script:
