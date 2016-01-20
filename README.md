@@ -4,6 +4,8 @@
 It provides data-parallel implementations of mathematical, statistical and
 machine learning methods for structured and unstructured data.
 
+[![Build Status](https://travis-ci.org/vatsan/incubator-madlib.svg?branch=master)](https://travis-ci.org/vatsan/incubator-madlib)
+
 Installation and Contribution
 ==============================
 See the project webpage  [`MADlib Home`](http://madlib.net) for links to the
