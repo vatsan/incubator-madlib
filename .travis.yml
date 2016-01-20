@@ -33,9 +33,8 @@ install:
   - sudo add-apt-repository -y ppa:texlive-backports/ppa
   - sudo apt-get -y update
   - sudo apt-get -y install texlive
-  - sudo apt-get install postgresql-server-9.2
+  - sudo apt-get install postgresql-9.2 postgresql-client-9.2
   - sudo apt-get install postgresql-server-dev-9.2
-  - sudo apt-get install postgresql-client
   - wget http://ftp.stack.nl/pub/users/dimitri/doxygen-1.8.4.linux.bin.tar.gz
   - tar -zxvf doxygen-1.8.4.linux.bin.tar.gz -C ${TRAVIS_BUILD_DIR}/tools
   - sudo apt-get install -y rpm
