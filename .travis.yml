@@ -49,3 +49,4 @@ deploy:
   file: doc/user/html
   on:
     repo: vatsan/incubator-madlib
+  skip_cleanup: true
